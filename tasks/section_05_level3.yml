@@ -44,6 +44,17 @@
       - section5
       - section5.3
       - section5.3.2
+      
+  - name: 5.3.2 Ensure lockout for failed password attempts is configured (Not Scored)
+    lineinfile:
+      name: /etc/pam.d/common-account
+      regexp: 'pam_tally2.so'
+      line: 'account required pam_tally2.so'
+    tags:
+      - section5
+      - section5.3
+      - section5.3.2
+
 
   - name: 5.3.3 Ensure password reuse is limited (Scored)
     lineinfile:
