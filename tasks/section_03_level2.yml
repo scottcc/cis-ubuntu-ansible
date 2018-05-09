@@ -49,6 +49,16 @@
       - section3
       - section3.2
       - section3.2.3
+      
+  - name: 3.2.3 Ensure secure ICMP redirects are not accepted (Scored) Part 2
+    sysctl:
+      name: net.ipv4.conf.default.secure_redirects
+      value: 0
+      state: present
+    tags:
+      - section3
+      - section3.2
+      - section3.2.3
 
   - name: 3.2.4 Ensure suspicious packets are logged (Scored)
     sysctl:
