@@ -29,7 +29,17 @@
       - section3
       - section3.3
       - section3.3.2
-
+  
+  - name: 3.3.2 Ensure IPv6 redirects are not accepted (Not Scored) part 2
+    sysctl:
+      name: net.ipv6.conf.all.accept_redirects
+      value: 0
+      state: present
+    tags:
+      - section3
+      - section3.3
+      - section3.3.2
+      
   - name: 3.3.3 Ensure IPv6 is disabled (Not Scored)
     sysctl:
       name: "{{ item }}"
