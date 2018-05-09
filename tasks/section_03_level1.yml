@@ -19,8 +19,8 @@
       - section3
       - section3.1
       - section3.1.2
-
-- name: 3.1.2 Ensure packet redirect sending is disabled (Scored) Part 2
+      
+  - name: 3.1.2 Ensure packet redirect sending is disabled (Scored) Part 2
     sysctl:
       name: net.ipv4.conf.default.send_redirects
       value: 0
