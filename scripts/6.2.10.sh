@@ -5,9 +5,11 @@ for dir in `cat /etc/passwd | egrep -v '(root|sync|halt|shutdown)' | awk -F: '($
       fileperm=`ls -ld $file | cut -f1 -d" "`
       if [ `echo $fileperm | cut -c6 ` != "-" ]; then
         echo "Group Write permission set on file $file"
+        chmod g-w $file
       fi
       if [ `echo $fileperm | cut -c9 ` != "-" ]; then
         echo "Other Write permission set on file $file"
+        chmod o-w $file
       fi
     fi
   done
