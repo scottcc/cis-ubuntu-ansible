@@ -5,7 +5,7 @@
       dest: /boot/grub/grub.cfg
       owner: root
       group: root
-      mode: 600
+      mode: 400
     tags:
       - section1
       - section1.4
