@@ -5,6 +5,7 @@
       name: net.ipv4.ip_forward
       value: '{{net_ipv4_ip_forward}}'
       state: present
+      reload: yes
     tags:
       - section3
       - section3.1
@@ -15,6 +16,7 @@
       name: net.ipv4.conf.all.send_redirects
       value: 0
       state: present
+      reload: yes
     tags:
       - section3
       - section3.1
@@ -25,6 +27,7 @@
       name: net.ipv4.conf.default.send_redirects
       value: 0
       state: present
+      reload: yes
     tags:
       - section3
       - section3.1
