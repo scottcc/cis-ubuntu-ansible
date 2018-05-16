@@ -141,6 +141,16 @@
       - section6
       - section6.1
       - section6.1.11
+      
+  - name: 6.1.11 Ensure no unowned files or directories exist (Scored) Try changing owner and group to Ubuntu
+    file: "{{ item }}"
+    owner: foo
+    group: foo
+    with_items: "{{unowned_files.stdout_lines}}"
+    tags:
+      - section6
+      - section6.1
+      - section6.1.11
 
   - name: 6.1.12 Ensure no ungrouped files or directories exist (Scored)
     shell: df --local -P | awk {'if (NR!=1) print $6'} | xargs -I '{}' find '{}' -xdev -nogroup -ls
