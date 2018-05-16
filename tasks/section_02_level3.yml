@@ -34,11 +34,12 @@
     apt:
       name: telnet
       state: absent
+      purge: yes
     tags:
       - section2
       - section2.3
       - section2.3.4
-
+      
   - name: 2.3.5 Ensure LDAP client is not installed (Scored)
     apt:
       name: ldap-utils
