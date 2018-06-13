@@ -136,8 +136,8 @@
       
   - name: 6.1.11 Ensure no unowned files or directories exist (Scored) Try changing owner and group to Ubuntu
     file: "{{ item }}"
-    owner: Ubuntu
-    group: Ubuntu
+    owner: ubuntu
+    group: ubuntu
     with_items: "{{unowned_files.stdout_lines}}"
     tags:
       - section6
@@ -157,8 +157,8 @@
 
   - name: 6.1.12 Ensure no ungrouped files or directories exist (Scored) Try changing owner and group to Ubuntu
     file: "{{ item }}"
-    owner: foo
-    group: foo
+    owner: ubuntu
+    group: ubuntu
     with_items: "{{ungrouped_files.stdout_lines}}"
     tags:
       - section6
