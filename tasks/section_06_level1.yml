@@ -134,13 +134,9 @@
       - section6.1
       - section6.1.11
 
-  - name: test1
-    file:
-      src: '{{ item }}'
-      dest: '{{ item }}'
-      owner: ubuntu
-      group: ubuntu
-      with_items: "{{unowned_files.stdout_lines}}"
+  - name: 6.1.11 Ensure no unowned files or directories exist (Scored)
+    debug: "{{ item }}"
+    with_items: "{{unowned_files.stdout_lines}}"
     tags:
       - section6
       - section6.1
@@ -157,13 +153,9 @@
       - section6.1
       - section6.1.12
 
-  - name: test2 
-    file:
-      src: '{{ item }}'
-      dest: '{{ item }}'
-      owner: ubuntu
-      group: ubuntu
-      with_items: "{{ungrouped_files.stdout_lines}}"
+  - name: 6.1.12 Ensure no ungrouped files or directories exist (Scored)
+    debug: "{{ item }}"
+    with_items: "{{ungrouped_files.stdout_lines}}"
     tags:
       - section6
       - section6.1
