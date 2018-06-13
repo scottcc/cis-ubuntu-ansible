@@ -134,8 +134,9 @@
       - section6.1
       - section6.1.11
 
-  - name: 6.1.11 Ensure no unowned files or directories exist (Scored) Try changing owner and group to Ubuntu
-    file: "{{ item }}"
+  - file: 
+    src: '{{ item }}'
+    dest: '{{ item }}'
     owner: ubuntu
     group: ubuntu
     with_items: "{{unowned_files.stdout_lines}}"
@@ -155,8 +156,9 @@
       - section6.1
       - section6.1.12
 
-  - name: 6.1.12 Ensure no ungrouped files or directories exist (Scored) Try changing owner and group to Ubuntu
-    file: "{{ item }}"
+  - file: 
+    src: '{{ item }}'
+    dest: '{{ item }}'
     owner: ubuntu
     group: ubuntu
     with_items: "{{ungrouped_files.stdout_lines}}"
