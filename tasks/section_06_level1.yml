@@ -133,7 +133,7 @@
       - section6
       - section6.1
       - section6.1.11
-      
+
   - name: 6.1.11 Ensure no unowned files or directories exist (Scored) Try changing owner and group to Ubuntu
     file: "{{ item }}"
     owner: ubuntu
