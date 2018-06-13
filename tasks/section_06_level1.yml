@@ -133,19 +133,11 @@
       - section6
       - section6.1
       - section6.1.11
-
-  - name: 6.1.11 Ensure no unowned files or directories exist (Scored)
-    debug: "{{ item }}"
-    with_items: "{{unowned_files.stdout_lines}}"
-    tags:
-      - section6
-      - section6.1
-      - section6.1.11
       
   - name: 6.1.11 Ensure no unowned files or directories exist (Scored) Try changing owner and group to Ubuntu
     file: "{{ item }}"
-    owner: foo
-    group: foo
+    owner: Ubuntu
+    group: Ubuntu
     with_items: "{{unowned_files.stdout_lines}}"
     tags:
       - section6
