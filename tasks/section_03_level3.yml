@@ -69,3 +69,10 @@
       - section3
       - section3.3
       - section3.3.3
+
+  - name: 3.3.3 update-grub Part 3
+    shell: update-grub
+    tags:
+      - section3
+      - section3.3
+      - section3.3.3
