@@ -48,6 +48,7 @@
       - section4.2
       - section4.2.1.2
 
+  - name: reigster rsyslog_files
   - command: find /etc/rsyslog.d -type f
     register: rsyslog_files
     changed_when: False
