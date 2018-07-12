@@ -58,7 +58,7 @@ enable_hosts_deny: True
 # Section 03 Level 6
 activate_iptables: False
 iptables_rules_file: /etc/iptables/rules.v4
-firewall_policy_drop: False
+firewall_policy_drop: True
 
 # Section 03 Level 7
 disable_wifi: True
