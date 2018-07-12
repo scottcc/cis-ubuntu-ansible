@@ -86,8 +86,8 @@ permit_root_login: without-password
 #sshd_allow_groups: sshusersallow
 sshd_allow_users: ubuntu root
 sshd_allow_groups: ubuntu root
-sshd_deny_users: sshdenied
-sshd_deny_groups: sshusersdeny
+#sshd_deny_users: sshdenied
+#sshd_deny_groups: sshusersdeny
 
 # Section 06
 
