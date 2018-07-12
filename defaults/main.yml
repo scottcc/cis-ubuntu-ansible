@@ -52,7 +52,7 @@ enable_tcp_syncookies: True
 disable_ipv6: True
 
 # Section 03 Level 4
-enable_hosts_allow: False
+enable_hosts_allow: True
 enable_hosts_deny: False
 
 # Section 03 Level 6
