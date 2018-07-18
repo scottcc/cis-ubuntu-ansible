@@ -5,21 +5,21 @@
       dest: /boot/grub/grub.cfg
       owner: root
       group: root
-      mode: 400
+      mode: 600
     tags:
       - section1
       - section1.4
       - section1.4.1
 
-#  - command: grep "^password" /boot/grub/grub.cfg
-#    register: boot_password
-#    failed_when: false
-#    ignore_errors: yes 
-#    changed_when: False
-#    tags:
-#      - section1
-#      - section1.4
-#      - section1.4.2
+  - command: grep "^password" /boot/grub/grub.cfg
+    register: boot_password
+    failed_when: false
+    ignore_errors: yes 
+    changed_when: False
+    tags:
+      - section1
+      - section1.4
+      - section1.4.2
 
 #  - name: 1.4.2 Ensure bootloader password is set (Scored)
 #    lineinfile:
