@@ -15,15 +15,15 @@
       - section01
       - level3
 
-  #- include: section_01_level4.yml
-  #  tags:
-  #    - section01
-  #    - level4
+  - include: section_01_level4.yml
+    tags:
+      - section01
+      - level4
 
-  #- include: section_01_level5.yml
-  #  tags:
-  #    - section01
-  #    - level5
+  - include: section_01_level5.yml
+    tags:
+      - section01
+      - level5
 
   - include: section_01_level6.yml
     tags:
