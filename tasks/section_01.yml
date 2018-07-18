@@ -16,6 +16,7 @@
       - level3
 
 #disabling bootloader becuase it is preventing log-in to instance on reboot
+#AWS does not provide "console access" to EC2 instances, so you can set a GRUB password the usual way, but you will not be able to enter it at boot. Your instance will become inaccessible after reboot.
  # - include: section_01_level4.yml
  #   tags:
  #     - section01
