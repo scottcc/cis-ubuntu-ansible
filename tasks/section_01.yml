@@ -15,10 +15,11 @@
       - section01
       - level3
 
-  - include: section_01_level4.yml
-    tags:
-      - section01
-      - level4
+#disabling bootloader becuase it is preventing log-in to instance on reboot
+ # - include: section_01_level4.yml
+ #   tags:
+ #     - section01
+ #     - level4
 
   - include: section_01_level5.yml
     tags:
