@@ -2,8 +2,8 @@
 
   - include: check_requirements.yml
 
-  #- include: section_01.yml
-  #  tags: section01
+  - include: section_01.yml
+    tags: section01
 
   - include: section_02.yml
     tags: section02
