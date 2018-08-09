@@ -81,7 +81,7 @@ restrict_core_dumps: True
 
 # Section 05
 # Section 05 Level 2
-permit_root_login: without-password
+permit_root_login: no
 #sshd_allow_users: sshuser
 #sshd_allow_groups: sshusersallow
 sshd_allow_users: ubuntu root
