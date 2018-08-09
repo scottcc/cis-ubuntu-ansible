@@ -74,7 +74,7 @@ set_rsyslog_remote: True
 syslog_package: rsyslog
 # Set rsyslog's logs remote server address to send logs. 
 # WARNING: Update the IP address without localhost address or rsyslog will hit 100% of the CPU usage
-remote_logs_host_address: 192.168.112.1
+remote_logs_host_address: 172.31.58.126
 
 # Modify the kernel behavior to disallow dump of suid binaries.
 restrict_core_dumps: True
@@ -102,4 +102,4 @@ modify_user_homes: True
 
 # Section 06 Level 5
 # Default ntp server for when none-already exists.
-ntp_server: 192.168.112.1
+ntp_server: 172.31.58.126
